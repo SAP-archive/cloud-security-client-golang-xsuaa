@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cloud-security-client-golang-xsuaa
-Upstream-Contact: jeffrey.groneberg@sap.com
+Upstream-Contact: Jeffrey Groneberg <jeffrey.groneberg@sap.com>
 Source: https://github.com/sap-samples/cloud-security-client-golang-xsuaa
 Disclaimer: The code in this project may include calls to APIs (“API Calls”) of
  SAP or third-party products or services developed outside of this project
