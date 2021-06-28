@@ -1,7 +1,9 @@
 # cloud-security-client-golang-xsuaa 
-Sample library to show how to use XSUAA in Golang application running on SAP BTP
+Sample library to show how to use XSUAA in Golang applications running on SAP BTP.
 
 This is not an official library (**ITS A SAMPLE!!**) and therefore is not been maintained in the future or is been updated to solve further security issues or reflect the current state of https://www.npmjs.com/package/@sap/xssec or https://github.com/SAP/cloud-security-xsuaa-integration. It should rather act as an inspiration for people trying to reuse or initiate their Golang applications on SAP BTP.
+The library has ported most of the functionality of the NodeJS xssec library (https://www.npmjs.com/package/@sap/xssec). As you can see there are also tests taken over from the xssec NodeJS lib to ensure the validation and verification algorithms are reflected as good as possible. But - as already stated - no guarantee if everything works as expected ;) If you find an error and/or want to add missign functionalities feel free to open a pull request (**with tests!**)
+
 
 ## Description
 
@@ -115,6 +117,8 @@ A simple example of how to use a cache:
 	fmt.Println(context.FamilyName)
 
 ```
+
+Please consider making the cache a single instance outside of the config as though it will be persistent. 
 
 ## Known Issues
 
