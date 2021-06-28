@@ -1,4 +1,4 @@
-# cloud-security-client-golang-xsuaa 
+# XSUAA Golang client library sample for SAP Business Technology Platform
 Sample library to show how to use XSUAA in Golang applications running on SAP Business Technology Platform.
 
 This is not an official library (**ITS A SAMPLE!!**) and therefore is not been maintained in the future or is been updated to solve further security issues or reflect the current state of https://www.npmjs.com/package/@sap/xssec or https://github.com/SAP/cloud-security-xsuaa-integration. It should rather act as an inspiration for people trying to reuse or initiate their Golang applications on SAP BTP.
