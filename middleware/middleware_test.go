@@ -18,7 +18,6 @@ import (
 //	"sburl": "https://internal-xsuaa.authentication.sap.hana.ondemand.com",
 //	"clientid": "sb-hangman-solution!t5593",
 //	"xsappname": "hangman-solution!t5593",
-//	"clientsecret": "***REMOVED***",
 //	"url": "https://cftraining.authentication.sap.hana.ondemand.com",
 //	"uaadomain": "authentication.sap.hana.ondemand.com",
 
