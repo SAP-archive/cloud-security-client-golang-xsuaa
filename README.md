@@ -117,8 +117,38 @@ A simple example of how to use a cache:
 	fmt.Println(context.FamilyName)
 
 ```
+Please consider making the cache a single instance outside of the config as though it will be persistent.
+### Using the middleware
 
-Please consider making the cache a single instance outside of the config as though it will be persistent. 
+```golang
+	xssecMiddleware := middleware.XssecMiddleware{
+
+		// take this env variables from your binding during runtime
+		XsuaaConfig: config.XsuaaConfig{
+			ClientId:  "clientId",
+			XsAppName: "appName",
+			Url:       "url",
+			UaaDomain: "domain",
+		},
+	}
+
+	http.Handle("api", xssecMiddleware.Handler(helper.HasLocalScopesHandler(func(writer http.ResponseWriter, request *http.Request) {
+
+		// do something in your handler
+		xssec := request.Context().Value("user").(*xssecgo.XssecContext)
+		fmt.Println(xssec.FamilyName)
+		fmt.Println(xssec.Email)
+
+		// check scopes
+		fmt.Println(xssec.Scope)
+
+	}, []string{"admin"}, "")))
+
+	http.ListenAndServe(":8080", nil)
+
+```
+
+ 
 
 ## Known Issues
 

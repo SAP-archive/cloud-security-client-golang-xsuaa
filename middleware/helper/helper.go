@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func HasLocalScopesHandler(h http.Handler, localScopes []string, xssecProperty string) http.Handler {
+func HasLocalScopesHandler(h http.HandlerFunc, localScopes []string, xssecProperty string) http.HandlerFunc {
 
 	if xssecProperty == "" {
 		xssecProperty = "user"

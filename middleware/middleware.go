@@ -92,7 +92,7 @@ type Options struct {
 	ValidationKeyGetter jwt.Keyfunc
 }
 
-func (m *XssecMiddleware) Handler(h http.Handler) http.Handler {
+func (m *XssecMiddleware) Handler(h http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// Let secure process the request. If it returns an error,
 		// that indicates the request should not continue.
