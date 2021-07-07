@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/cloud-security-client-golang-xsuaa)](https://api.reuse.software/info/github.com/SAP-samples/cloud-security-client-golang-xsuaa)
+
 # XSUAA Golang client library sample for SAP Business Technology Platform
 Sample library to show how to use XSUAA in Golang applications running on SAP Business Technology Platform.
 

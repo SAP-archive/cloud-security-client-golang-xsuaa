@@ -19,9 +19,9 @@ func ValidationKeyGetter(xsuaaConfig config.XsuaaConfig, validateJKU validation.
 		}
 
 		uuaDomain := xsuaaConfig.UaaDomain
-		tokenUrl := xsuaaConfig.Url + "/token_keys"
-
 		jkuUrl := token.Header["jku"].(string)
+		tokenUrl := jkuUrl
+
 		if jkuUrl == "" {
 			return nil, errors.New("no jku in header available to validate trust")
 		}
@@ -68,9 +68,9 @@ func ValidationKeyGetterWithCacheConfigurable(xsuaaConfig config.XsuaaConfig, va
 	return func(token *jwt.Token) (interface{}, error) {
 
 		uuaDomain := xsuaaConfig.UaaDomain
-		tokenUrl := xsuaaConfig.Url + "/token_keys"
-
 		jkuUrl := token.Header["jku"].(string)
+		tokenUrl := jkuUrl
+
 		if jkuUrl == "" {
 			return nil, errors.New("no jku in header available to validate trust")
 		}
